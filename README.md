@@ -40,7 +40,34 @@ python -m ipykernel install --user --name ml4o2_v2 --display-name ML4O2_v2
   - PO4/src : source codes
   - PO4/run : this is where we run the job
 
-  - First, download this repository
+  - First, download this repository. 
 ```
-git clone 
-``` 
+git clone https://github.com/takaito1/ML4BGC.git
+```
+  - Create a space to hold the output by replacing the "username" with your account
+```
+mkdir -p /glade/derecho/scratch/username/ML4BGC_results/
+mkdir -p /glade/derecho/scratch/username/ML4BGC_temp/
+```
+  - Then, edit the following files for specific user
+  - In PO4/src/run.pbs, edit line 9, 11, and 14 for your account
+  - In PO4/src/po4_trian.py, edit line 36 and 114 for your account
+  - In PO4/src/po4_eval.py, edit line 21 and 22 for your account
+  - In PO4/src/po4_project.py, edit line 34 and 109 for your account
+```
+cd PO4/run
+```
+  - run the jupyter notebook "gen_exec.ipynb"
+  - this will create the executable file, "exec.sh"
+  - you have to ssh into derecho using your credential
+```
+ssh derecho
+```
+  - then you can execute the run script
+```
+bash exec.sh
+```
+  - you can check the status of the run using "qstat"
+```
+qstat
+```
