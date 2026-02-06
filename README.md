@@ -36,6 +36,11 @@ python -m ipykernel install --user --name ml4o2_v2 --display-name ML4O2_v2
 ## Xarray tutorial
 - This video is a good introduction to X array [link](https://youtu.be/a339Q5F48UQ?si=mcCZE2vuptlOZPuE) Please watch this video if you haven't do so already.
 
-## Project scripts instructions
+## PO4 project instructions
   - PO4/src : source codes
   - PO4/run : this is where we run the job
+
+  - First, download this repository
+```
+git clone 
+``` 
